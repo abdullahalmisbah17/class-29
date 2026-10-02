@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-nato-sans: "Noto Sans", sans-serif;
+   --animate-animation: ping 1s ease-in-out infinite;
+
+  
+
+ @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+}
+
+ @layer components {
+.custom-heading {
+   @apply text-white bg-pink-500 font-semibold;
+}
+}
+
+@layer base {
+  h1 {
+    font-size: 56px;
+  }
+}
+
+/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+
+
+   @layer {
+    .container {
+      @apply max-w-[1200px] mx-auto px-3 lg:px-5;
+    }
+   }
